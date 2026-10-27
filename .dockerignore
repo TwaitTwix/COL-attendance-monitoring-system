@@ -1,0 +1,11 @@
+git
+.github
+.vscode
+frontend
+node_modules
+**/vendor
+.env
+.env.*
+.gitignore
+README.md
+DEPLOYMENT.md
