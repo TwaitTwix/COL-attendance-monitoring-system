@@ -1,0 +1,13 @@
+{
+    "name": "cite/attendance-monitoring-system",
+    "description": "QR-based event attendance monitoring system with geofencing",
+    "authors": [
+        {
+            "name": "TwaitTwix",
+            "email": "leonardolllmacalinaoisap@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.8"
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Monitoring System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <h1>Attendance Hub</h1>
+        <nav class="nav">
+          <button class="nav-button active" data-view="login">Login</button>
+          <button class="nav-button" data-view="overview">Overview</button>
+          <button class="nav-button" data-view="student">Student</button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <section id="login-panel" class="panel active">
+          <h2>Sign in</h2>
+          <form id="login-form">
+            <label>
+              Email
+              <input type="email" id="email" placeholder="user@example.com" required />
+            </label>
+            <label>
+              Password
+              <input type="password" id="password" placeholder="••••••••" required />
+            </label>
+            <button type="submit">Login</button>
+          </form>
+          <div id="login-message" class="message"></div>
+        </section>
+
+        <section id="overview-panel" class="panel">
+          <div class="panel-header">
+            <h2>Admin overview</h2>
+            <button id="load-overview" class="small-button">Refresh</button>
+          </div>
+          <div id="overview-cards" class="cards"></div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Status</th>
+                  <th>Sessions</th>
+                  <th>Students</th>
+                </tr>
+              </thead>
+              <tbody id="overview-table"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="student-panel" class="panel">
+          <div class="panel-header">
+            <h2>Student dashboard</h2>
+            <button id="load-student" class="small-button">Refresh</button>
+          </div>
+          <div id="student-cards" class="cards"></div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Session</th>
+                  <th>Status</th>
+                  <th>Check-in</th>
+                </tr>
+              </thead>
+              <tbody id="student-table"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
