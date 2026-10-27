@@ -1,4 +1,6 @@
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = (window.__APP_CONFIG__ && window.__APP_CONFIG__.API_BASE_URL)
+  ? `${window.__APP_CONFIG__.API_BASE_URL.replace(/\/$/, '')}`
+  : 'http://localhost:8000/api';
 
 const state = {
   token: localStorage.getItem('attendance_token') || '',
