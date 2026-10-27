@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: col-attendance-monitoring-system-api
+    runtime: php
+    plan: free
+    buildCommand: |
+      cd backend && composer install --no-interaction --prefer-dist --no-progress
+    startCommand: |
+      cd backend && php -S 0.0.0.0:$PORT -t public
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_SSLMODE
+        value: require
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_PUBLISHABLE_KEY
+        sync: false
